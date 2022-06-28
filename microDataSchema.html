@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro Data Schema</title>
+</head>
+
+<body>
+    <!--HTML SECTION-->
+    <header>
+        <nav class="navigation">
+            <ul class="list-navigation">
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--JAVA SCRIPT SECTION | MICRO DATA SCHEMA FRO NAVIGATION-->
+    <script type="text/javascript">
+        const ulLists = document.querySelector('ul.list-navigation');
+        ulLists.setAttribute('itemtype', 'https://schema.org/SiteNavigationElement');
+        ulLists.setAttribute('itemscope', ' ');
+
+        const listNavigation = document.querySelectorAll('ul.list-navigation li');
+        for (i = 0; i < listNavigation.length; i++) {
+            listNavigation[i].setAttribute('itemprop', 'name');
+        };
+
+        const linksNavigation = document.querySelectorAll('ul.list-navigation a');
+        for (i = 0; i < linksNavigation.length; i++) {
+            linksNavigation[i].setAttribute('itemprop', 'url');
+
+        };
+    </script>
+</body>
+
+</html>
